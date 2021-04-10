@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import { Provider } from 'react-redux'
+import Navbar from './components/Navbar';
+import LoadingPage from './components/LoadingPage';
+import store from './store'
+import { HashRouter as Router, Route } from 'react-router-dom';
+import  secondpage  from './components/secondpage';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <Router>
+        <div>
+          <Navbar />
+          <Route exact path="/" component={LoadingPage} />
+          <Route exact path="/secondpage/:id" component={secondpage} />
+      </div>
+      </Router>
+    </Provider>
+
+  )
 }
 
 export default App;

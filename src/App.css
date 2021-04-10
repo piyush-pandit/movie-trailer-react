@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+body{
+  background: #232526; 
+  background: -webkit-linear-gradient(to right, #414345, #232526);  
+  background: linear-gradient(to right, #414345, #232526); 
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +41,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+#imdb-logo{
+  color :rgb(219, 129, 10);
+}
+
+#youtube-logo{
+  color :red;
+}
+
+
+.jumbo{
+  padding : 1px 1px 1px 1px;
+}
+
+::-webkit-input-placeholder{
+text-align: center;
+}
+
+.title{
+  color: #dfd43d;
+  width: 100%;
+  text-align: center;
+  height: 120px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
+    0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
 }
